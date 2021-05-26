@@ -16,7 +16,7 @@ public class ClassDir extends Staff{
 
     // Produce a teaching request
     public TeachingRequest produce_one_request(Date time, Float cost, String place, Integer ptt_num,String training){
-        TeachingRequest teachingRequest = new TeachingRequest("id", time, cost, place,ptt_num, this ,training);
+        TeachingRequest teachingRequest = new TeachingRequest("tr" + String.valueOf(new Date().getTime()), time, cost, place,ptt_num, this ,training);
         return teachingRequest;
     }
 

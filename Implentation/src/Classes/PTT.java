@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PTT extends Staff{
-    private List<String> trainings = null; // The trainings PTT attended
+    public List<String> trainings = null; // The trainings PTT attended
 
     // Constructor
     public PTT(){trainings = new ArrayList<String>();}
@@ -16,7 +16,6 @@ public class PTT extends Staff{
         super(ID,name);
         trainings = new ArrayList<String>();
     }
-
 
     // Add a training to this PTT
     public void add_a_training(String training){
@@ -31,7 +30,8 @@ public class PTT extends Staff{
     public void FormatIOPrint(FormatOutput output) {
         output.print("ID: " + this.getID() + ", ");
         output.print("Name: " + this.getName() + ", ");
-        output.print("Training: [" + TrainingsToString() + "]\n");
+        output.print("Training: [" + TrainingsToString() + "]" + this.trainings.size());
+        output.print("\n");
     }
 
     @Override
@@ -43,8 +43,10 @@ public class PTT extends Staff{
             this.setName(inputArray[1].split(": ")[1]);
             String trainings = inputArray[2].split(": ")[1];
             String[] trainingList = trainings.substring(1,trainings.length()-1).split(", ");
-            for( int i=0 ; i<trainingList.length ; i++ )
-                this.add_a_training(trainingList[i]);
+            for( int i=0 ; i<trainingList.length ; i++ ){
+                if (trainingList[i].length()>1)
+                    this.add_a_training(trainingList[i]);
+            }
         } catch (EofX eofX) {
             eofX.printStackTrace();
         }

@@ -101,7 +101,8 @@ public class TeachingRequest implements ClassFormatIO{
     @Override
     public void FormatIOPrint(FormatOutput output) {
         output.print("ID: " + this.ID + ", ");
-        output.print("Time: " + this.time.toString() + ", ");
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.ENGLISH);
+        output.print("Time: " + sdf.format(this.time) + ", ");
         output.print("Cost: " + String.valueOf(this.cost) + ", ");
         output.print("Place: " + this.place + ", ");
         output.print("PTT needed: " + String.valueOf(this.ptt_num) + ", ");
@@ -119,7 +120,7 @@ public class TeachingRequest implements ClassFormatIO{
         try {
             String str_TeachingRequest = input.readLine();
             String[] inputArray = str_TeachingRequest.split(", ",6);
-            SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.ENGLISH);
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.ENGLISH);
             this.time = sdf.parse(inputArray[0].split(": ")[1]);
             this.cost = Float.valueOf(inputArray[1].split(": ")[1]);
             this.place = inputArray[2].split(": ")[1];
