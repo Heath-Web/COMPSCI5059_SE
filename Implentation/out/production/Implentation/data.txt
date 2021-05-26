@@ -1,0 +1,17 @@
+Administrator ID: adm001, Name: zhangsan
+Administrator ID: adm002, Name: Ze W
+Administrator ID: adm003, Name: Yiping
+Administrator ID: adm004, Name: Feng
+ClassDir ID: cd001, Name: Ze
+ClassDir ID: cd000, Name: Zesssss
+ClassDir ID: cd001, Name: clsadd
+ClassDir ID: cd002, Name: dadsad
+ClassDir ID: cd003, Name: ffdgfg
+PTT ID: p001, Name: ptt1, Training: [train1, train2]
+PTT ID: p002, Name: ptt2, Training: [train3]
+PTT ID: p003, Name: ptt3, Training: [train2, train4, train5]
+PTT ID: p004, Name: ptt4, Training: [train5, train4, train10, train29+, trainsepcial]
+PTT ID: p005, Name: ptt5, Training: []
+TeachingRequest ID: tr001, Time: 04:45 26/05/2021, Cost: 123.57, Place: Learning Hub, PTT needed: 100, Training: train20+, ClassDir: (ID: cd002, Name: dadsad), PTTList: [(ID: p001, Name: ptt1, Training: [train1, train2]), (ID: p004, Name: ptt4, Training: [train5, train4, train10, train29+, trainsepcial])]
+TeachingRequest ID: tr002, Time: 04:55 26/05/2021, Cost: 1.57, Place: Learning Hub, PTT needed: 13, Training: train20+, ClassDir: (ID: cd002, Name: dadsad), PTTList: [(ID: p001, Name: ptt1, Training: [train1, train2]), (ID: p004, Name: ptt4, Training: [train5, train4, train10, train29+, trainsepcial])]
+TeachingRequest ID: tr1622035621247, Time: 10:00 25/05/2021, Cost: 100.0, Place: Learning Hub, PTT needed: 3, Training: basic teaching skills, ClassDir: (ID: cd002, Name: dadsad), PTTList: []
