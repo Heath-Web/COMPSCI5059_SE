@@ -6,8 +6,6 @@ import java.util.Date;
 import java.util.List;
 
 public class TeachingRequestFactory {
-    private String place; // Place
-    private int ptt_num; // Number of PTT needed
 
     public String makeID(){
         String ID = "ID";

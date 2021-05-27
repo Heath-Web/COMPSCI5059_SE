@@ -62,6 +62,10 @@ public class Service {
                 TrainingArrangement.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
                 Service.getInstance().Start(consoleIn,consoleOut);
                 break;
+            case OP_PTTVIEW:
+                PTTView.getInstance().ShowAll(consoleIn,consoleOut);
+                Service.getInstance().Start(consoleIn,consoleOut);
+                break;
             case OP_LOGOUT:
                 Logout.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
                 Service.getInstance().Start(consoleIn,consoleOut);
