@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0bac3ed4-d903-4ed8-a257-57f5e65267f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory/TeachingRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/TeachingRequestFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Functions/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/Service.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +113,7 @@
       <workItem from="1622043471391" duration="494000" />
       <workItem from="1622044035333" duration="749000" />
       <workItem from="1622110021584" duration="4594000" />
-      <workItem from="1622141352744" duration="9689000" />
+      <workItem from="1622141352744" duration="11345000" />
     </task>
     <task id="LOCAL-00001" summary="complete all function (first version)">
       <created>1622037821282</created>
