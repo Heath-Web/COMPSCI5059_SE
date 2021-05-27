@@ -30,7 +30,7 @@ public class PTT extends Staff{
     public void FormatIOPrint(FormatOutput output) {
         output.print("ID: " + this.getID() + ", ");
         output.print("Name: " + this.getName() + ", ");
-        output.print("Training: [" + TrainingsToString() + "]" + this.trainings.size());
+        output.print("Training: [" + TrainingsToString() + "]");
         output.print("\n");
     }
 
