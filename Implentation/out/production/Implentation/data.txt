@@ -1,0 +1,17 @@
+Administrator ID: adm001, Name: Heath
+Administrator ID: adm002, Name: Judy
+Administrator ID: adm003, Name: Jack
+Administrator ID: adm004, Name: Rose
+ClassDir ID: cd001, Name: Tom
+ClassDir ID: cd000, Name: Someone
+ClassDir ID: cd001, Name: Class Director num one
+ClassDir ID: cd002, Name: Class Director num two
+ClassDir ID: cd003, Name: Class Director num three
+PTT ID: p001, Name: Alice, Training: [train1, train2]
+PTT ID: p002, Name: Andy, Training: [train3]
+PTT ID: p003, Name: Khaox, Training: [train2, train4, train5]
+PTT ID: p004, Name: Ciel, Training: [train5, train4, train10, train29+, teaching skill]
+PTT ID: p005, Name: Kawhi, Training: []
+TeachingRequest ID: tr001, Time: 04:45 26/05/2021, Cost: 123.57, Place: Learning Hub, PTT needed: 100, Training: train20+, ClassDir: (ID: cd001, Name: Tom), PTTList: [(ID: p001, Name: Alice, Training: [train1, train2]), (ID: p004, Name: Ciel, Training: [train5, train4, train10, train29+, teaching skill])]
+TeachingRequest ID: tr002, Time: 04:55 26/05/2021, Cost: 1.57, Place: Learning Hub, PTT needed: 13, Training: train20+, ClassDir: (ID: cd000, Name: Someone), PTTList: [(ID: p004, Name: ptt4, Training: [train5, train4, train10, train29+, trainsepcial])]
+TeachingRequest ID: tr1622035621247, Time: 10:00 25/05/2021, Cost: 100.0, Place: Learning Hub, PTT needed: 3, Training: basic teaching skills, ClassDir: (ID: cd001, Name: Tom), PTTList: []
