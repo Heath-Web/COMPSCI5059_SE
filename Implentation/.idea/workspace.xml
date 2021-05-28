@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bac3ed4-d903-4ed8-a257-57f5e65267f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Functions/ClientFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Functions/ExistSys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Classes/ClassDir.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Classes/ClassDir.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Classes/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Classes/Staff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Factory/TeachingRequestFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/Logout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/Logout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/PTTAllocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/PTTAllocation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/PTTView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/PTTView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/TRProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/TRProducer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/TRView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/TRView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/TrainingArrangement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/TrainingArrangement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/MainProgram/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/MainProgram/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Builder/TRBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builder/TRBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Administrator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/ClassDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/ClassDir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/ClassFormatIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/ClassFormatIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/PTT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/PTT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory/TeachingRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builder/TRBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/TeachingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/TeachingRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Functions/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/Authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functions/ClientFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/ClientFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functions/ExistSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/ExitSys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functions/FileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/FileIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Functions/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/Logout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Functions/PTTAllocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/PTTAllocation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Functions/PTTView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/PTTView.java" afterDir="false" />
@@ -142,7 +133,7 @@
       <workItem from="1622044035333" duration="749000" />
       <workItem from="1622110021584" duration="4594000" />
       <workItem from="1622141352744" duration="11345000" />
-      <workItem from="1622179468633" duration="9753000" />
+      <workItem from="1622179468633" duration="25196000" />
     </task>
     <task id="LOCAL-00001" summary="complete all function (first version)">
       <created>1622037821282</created>

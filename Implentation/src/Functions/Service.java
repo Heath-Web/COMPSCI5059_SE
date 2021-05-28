@@ -1,99 +1,63 @@
 package Functions;
 
-import Classes.ClassFormatIO;
 import FormatIO.EofX;
-import FormatIO.Format;
 import FormatIO.FormatInput;
 import FormatIO.FormatOutput;
 import MainProgram.Main;
-
 import java.util.*;
 
+/**
+ * Service, Singleton
+ * Define the functions for different type of Staff
+ * Facade of all functions
+ */
 public class Service {
+    // HashMap form Staff name (Administrator, class director, and PTT) to their corresponding functions
     private HashMap<String, ClientFunction[]> optionList = new HashMap<>();
+    // all function instances for Class director
+    private final ClientFunction[] ClassDirOptions = {TRProducer.getInstance(), TRView.getInstance(), Logout.getInstance(), ExitSys.getInstance()};
+    // all functions instances for Administrator
+    private final ClientFunction[] AdmOptions = {TrainingArrangement.getInstance(), PTTAllocation.getInstance(), PTTView.getInstance(),TRView.getInstance(),Logout.getInstance(), ExitSys.getInstance()};
+    // all functions instances for PTT
+    private final ClientFunction[] PTTOptions = {Logout.getInstance(), ExitSys.getInstance()};
 
-    //private final String OP_PTTALLOCATION = "Allocate PTT to Teaching request";
-    //private final String OP_TRPRODUCE = "Produce a teaching request";
-    //private final String OP_TRAININGARRANGEMENT = "Arrange a training";
-    //private final String OP_TRVIEW = "View all Teaching Request";
-    //private final String OP_PTTVIEW = "View All PTTs";
-    //private final String OP_LOGOUT = "Log out";
-    //private final String OP_EXISTSYS = "Exist System";
-
-    private final ClientFunction[] ClassDirOptions = {TRProducer.getInstance(), TRView.getInstance(), Logout.getInstance(), ExistSys.getInstance()};
-    private final ClientFunction[] AdmOptions = {TrainingArrangement.getInstance(), PTTAllocation.getInstance(), PTTView.getInstance(),TRView.getInstance(),Logout.getInstance(),ExistSys.getInstance()};
-    private final ClientFunction[] PTTOptions = {Logout.getInstance(),ExistSys.getInstance()};
-
+    //Singleton
     private static Service service = new Service();
     public static Service getInstance() { return service; }
-
     public Service() {
+        // initialize option list
         this.optionList.put("Administrator", AdmOptions);
         this.optionList.put("ClassDir",ClassDirOptions);
         this.optionList.put("PTT",PTTOptions);
     }
 
+    // Start Service
     public void Start(FormatInput consoleIn, FormatOutput consoleOut) throws EofX {
+        // Check whether user has past authentication or not
         if (Main.currentUser == null){
+            // if not, start authentication process
             Authentication.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
         }
+        // get corresponding alternative functions list according to the type of current user
         ClientFunction[] currentUserOptions = this.optionList.get(Main.currentUser.getClass().getSimpleName());
         consoleOut.print("You can ");
         for (int i=0;i<currentUserOptions.length;i++) {
-            consoleOut.print(i+1);
+            consoleOut.print(i+1); // print sequence number
             consoleOut.print(". ");
-            consoleOut.print(currentUserOptions[i].getSimpleDiscription() + "\n");
+            consoleOut.print(currentUserOptions[i].getSimpleDescription() + "\n"); // print options
         }
         consoleOut.print("Please choose an action from above : ");
         try {
-            int option = Integer.parseInt(consoleIn.readWord());
-            currentUserOptions[option-1].ExecuteOnFormatIO(consoleIn,consoleOut);
-            Service.getInstance().Start(consoleIn,consoleOut);
+            int option = Integer.parseInt(consoleIn.readWord()); // read option code that user chooses
+            currentUserOptions[option-1].ExecuteOnFormatIO(consoleIn,consoleOut); // start corresponding function process
+            Service.getInstance().Start(consoleIn,consoleOut); // restart service when client function finishes
         }catch (Exception e){
+            // invalid option number
             consoleOut.print("Invalid action! \n");
             Service.getInstance().Start(consoleIn,consoleOut);
         }
-        /*switch (currentUserOptions[option-1]){
-            case OP_TRPRODUCE:
-                TRProducer.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
-                Service.getInstance().Start(consoleIn,consoleOut);
-                break;
-            case OP_PTTALLOCATION:
-                PTTAllocation.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
-                Service.getInstance().Start(consoleIn,consoleOut);
-                break;
-            case OP_TRVIEW:
-                TRView.getInstance().ShowAll(consoleIn, consoleOut);
-                Service.getInstance().Start(consoleIn,consoleOut);
-                break;
-            case OP_TRAININGARRANGEMENT:
-                TrainingArrangement.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
-                Service.getInstance().Start(consoleIn,consoleOut);
-                break;
-            case OP_PTTVIEW:
-                PTTView.getInstance().ShowAll(consoleIn,consoleOut);
-                Service.getInstance().Start(consoleIn,consoleOut);
-                break;
-            case OP_LOGOUT:
-                Logout.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
-                Service.getInstance().Start(consoleIn,consoleOut);
-                break;
-            case OP_EXISTSYS:
-                break;
-            default:
-                consoleOut.print("Invalid action!");
-                break;
-        }*/
+
     }
 
-    /*private class option {
-        public int option_code;
-        public String str_option;
-
-        public option(int option_code, String str_option) {
-            this.option_code = option_code;
-            this.str_option = str_option;
-        }
-    }*/
 
 }

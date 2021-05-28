@@ -6,6 +6,10 @@ import Functions.*;
 
 import java.util.*;
 
+/**
+ * Main program
+ * contains global variables
+ */
 public class Main {
     // Global variables
     public static final String FILENAME = "data.txt"; // file path and name
@@ -19,7 +23,7 @@ public class Main {
         FileIO fileIO = new FileIO();
         fileIO.LoadData(); // Load all data
 
-        Console console = new Console();
-        Service.getInstance().Start(console, console);
+        Console console = new Console(); // load console
+        Service.getInstance().Start(console, console); // start service
     }
 }

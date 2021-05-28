@@ -22,8 +22,14 @@ public class TRBuilder{
         this.reset();
     }
 
+    // Reset builder
     public void reset(){
         teachingRequest = new TeachingRequest("tr" + String.valueOf(new Date().getTime()));
+    }
+
+    // acquire teaching request object (result) from builder
+    public TeachingRequest getResult(){
+        return this.teachingRequest;
     }
 
     public void setTime(String str_time) throws ParseException {
@@ -45,9 +51,5 @@ public class TRBuilder{
     }
     public void setTraining(String training){
         this.teachingRequest.setTraining(training);
-    }
-
-    public TeachingRequest getResult(){
-        return this.teachingRequest;
     }
 }

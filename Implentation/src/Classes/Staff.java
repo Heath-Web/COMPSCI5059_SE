@@ -1,19 +1,20 @@
 package Classes;
 
-import FormatIO.Format;
-import FormatIO.FormatOutput;
-import Functions.ClientFunction;
-
+/**
+ * The Staff class is an abstract class
+ * represent the current staff of the university
+ * which is also considered as the user of this system
+ */
 public abstract class Staff implements ClassFormatIO {
     private String ID; // Staff ID number
-    private String name; // Staff name
+    private String name; // Staff Name
 
     // Constructor
+    public Staff(){}
     public Staff(String ID, String name) {
         this.ID = ID;
         this.name = name;
     }
-    public Staff(){}
 
     // Getter and Setter
     public void setID(String ID){this.ID = ID;}

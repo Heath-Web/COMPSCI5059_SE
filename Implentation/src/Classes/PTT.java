@@ -3,18 +3,21 @@ package Classes;
 import FormatIO.EofX;
 import FormatIO.FormatInput;
 import FormatIO.FormatOutput;
-
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This Class represent the user Part Time Teacher and inherit Staff class
+ * @see Classes.Staff
+ */
 public class PTT extends Staff{
-    public List<String> trainings = null; // The trainings PTT attended
+    public List<String> trainings = null; // A list of training PTT has attended
 
     // Constructor
     public PTT(){trainings = new ArrayList<String>();}
     public PTT(String ID, String name) {
         super(ID,name);
-        trainings = new ArrayList<String>();
+        trainings = new ArrayList<String>(); // initialize training list
     }
 
     // Add a training to this PTT
@@ -26,6 +29,7 @@ public class PTT extends Staff{
         }
     }
 
+    // Override method. Using FormatIO output stream print this PTT object
     @Override
     public void FormatIOPrint(FormatOutput output) {
         output.print("ID: " + this.getID() + ", ");
@@ -34,6 +38,7 @@ public class PTT extends Staff{
         output.print("\n");
     }
 
+    // Override method. Using FormatIO input stream read all the information and store in this PTT object
     @Override
     public ClassFormatIO FormatIORead(FormatInput input) {
         try {
@@ -53,12 +58,19 @@ public class PTT extends Staff{
         return this;
     }
 
+    /**
+     * This method convert the training list of this PTT
+     * to a String Format (trainings separated by comma and space)
+     * @return : String format of the training list
+     */
     private String TrainingsToString(){
-        String re = "";
+        String re = ""; // result (Target string)
         for(int i=0 ; i<this.trainings.size() ; i++){
             if(i == this.trainings.size()-1)
+                // the last training
                 re = re + trainings.get(i);
             else
+                // separate by comma and space
                 re = re + trainings.get(i) + ", ";
         }
         return re;

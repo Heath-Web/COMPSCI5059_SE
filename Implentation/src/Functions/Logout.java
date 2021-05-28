@@ -5,23 +5,27 @@ import FormatIO.FormatInput;
 import FormatIO.FormatOutput;
 import MainProgram.Main;
 
+/**
+ *  Log out function, Singleton
+ *  logout and Jump to the authentication function
+ */
 public class Logout implements ClientFunction {
-    private String simpleDiscription = "Log out";
+    private final String simpleDescription = "Log out"; // function simple description
 
-    private static Logout pttAllocation = new Logout();
-
+    //Singleton
+    private static Logout logout = new Logout();
     private Logout(){}
+    public static Logout getInstance() { return logout; }
 
-    public static Logout getInstance() { return pttAllocation; }
-
-    @Override
-    public String getSimpleDiscription() {
-        return this.simpleDiscription;
-    }
-
+    // Execute Logout process
     public void ExecuteOnFormatIO(FormatInput consoleIn, FormatOutput consoleOut) throws EofX {
         consoleOut.print("User " + Main.currentUser.getID() + " Logout successfully! \n");
-        Main.currentUser = null;
-        Authentication.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
+        Main.currentUser = null; // clear current user
+        Authentication.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut); // start Authentication process
+    }
+
+    @Override
+    public String getSimpleDescription() {
+        return this.simpleDescription;
     }
 }
