@@ -1,11 +1,8 @@
 package Classes;
 
 import FormatIO.EofX;
-import FormatIO.Format;
 import FormatIO.FormatInput;
 import FormatIO.FormatOutput;
-import com.sun.xml.internal.bind.ValidationEventLocatorEx;
-
 import java.util.Iterator;
 import java.util.List;
 

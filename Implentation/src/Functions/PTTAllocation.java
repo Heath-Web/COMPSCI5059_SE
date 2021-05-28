@@ -10,12 +10,19 @@ import MainProgram.Main;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PTTAllocation {
+public class PTTAllocation implements ClientFunction{
+    private String simpleDiscription = "Allocate PTT to Teaching request";
+
     private static PTTAllocation pttAllocation = new PTTAllocation();
 
     private PTTAllocation(){}
 
     public static PTTAllocation getInstance() { return pttAllocation; }
+
+    @Override
+    public String getSimpleDiscription() {
+        return this.simpleDiscription;
+    }
 
     public void ExecuteOnFormatIO(FormatInput consoleIn, FormatOutput consoleOut) throws EofX {
         consoleOut.print("Please enter the ID of Teaching request (e.g. tr001): ");

@@ -2,6 +2,7 @@ package Classes;
 
 import FormatIO.Format;
 import FormatIO.FormatOutput;
+import Functions.ClientFunction;
 
 public abstract class Staff implements ClassFormatIO {
     private String ID; // Staff ID number

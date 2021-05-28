@@ -1,5 +1,6 @@
 package Functions;
 
+import Classes.ClassFormatIO;
 import FormatIO.EofX;
 import FormatIO.Format;
 import FormatIO.FormatInput;
@@ -9,19 +10,19 @@ import MainProgram.Main;
 import java.util.*;
 
 public class Service {
-    private HashMap<String, String[]> optionList = new HashMap<>();
+    private HashMap<String, ClientFunction[]> optionList = new HashMap<>();
 
-    private final String OP_PTTALLOCATION = "Allocate PTT to Teaching request";
-    private final String OP_TRPRODUCE = "Produce a teaching request";
-    private final String OP_TRAININGARRANGEMENT = "Arrange a training";
-    private final String OP_TRVIEW = "View all Teaching Request";
-    private final String OP_PTTVIEW = "View All PTTs";
-    private final String OP_LOGOUT = "Log out";
-    private final String OP_EXISTSYS = "Exist System";
+    //private final String OP_PTTALLOCATION = "Allocate PTT to Teaching request";
+    //private final String OP_TRPRODUCE = "Produce a teaching request";
+    //private final String OP_TRAININGARRANGEMENT = "Arrange a training";
+    //private final String OP_TRVIEW = "View all Teaching Request";
+    //private final String OP_PTTVIEW = "View All PTTs";
+    //private final String OP_LOGOUT = "Log out";
+    //private final String OP_EXISTSYS = "Exist System";
 
-    private final String[] ClassDirOptions = {OP_TRPRODUCE, OP_TRVIEW, OP_LOGOUT,OP_EXISTSYS};
-    private final String[] AdmOptions = {OP_TRAININGARRANGEMENT, OP_PTTALLOCATION, OP_PTTVIEW,OP_TRVIEW,OP_LOGOUT,OP_EXISTSYS};
-    private final String[] PTTOptions = {OP_LOGOUT,OP_EXISTSYS};
+    private final ClientFunction[] ClassDirOptions = {TRProducer.getInstance(), TRView.getInstance(), Logout.getInstance(), ExistSys.getInstance()};
+    private final ClientFunction[] AdmOptions = {TrainingArrangement.getInstance(), PTTAllocation.getInstance(), PTTView.getInstance(),TRView.getInstance(),Logout.getInstance(),ExistSys.getInstance()};
+    private final ClientFunction[] PTTOptions = {Logout.getInstance(),ExistSys.getInstance()};
 
     private static Service service = new Service();
     public static Service getInstance() { return service; }
@@ -36,16 +37,23 @@ public class Service {
         if (Main.currentUser == null){
             Authentication.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
         }
-        String[] currentUserOptions = this.optionList.get(Main.currentUser.getClass().getSimpleName());
+        ClientFunction[] currentUserOptions = this.optionList.get(Main.currentUser.getClass().getSimpleName());
         consoleOut.print("You can ");
         for (int i=0;i<currentUserOptions.length;i++) {
             consoleOut.print(i+1);
             consoleOut.print(". ");
-            consoleOut.print(currentUserOptions[i] + "\n");
+            consoleOut.print(currentUserOptions[i].getSimpleDiscription() + "\n");
         }
         consoleOut.print("Please choose an action from above : ");
-        int option = Integer.parseInt(consoleIn.readWord());
-        switch (currentUserOptions[option-1]){
+        try {
+            int option = Integer.parseInt(consoleIn.readWord());
+            currentUserOptions[option-1].ExecuteOnFormatIO(consoleIn,consoleOut);
+            Service.getInstance().Start(consoleIn,consoleOut);
+        }catch (Exception e){
+            consoleOut.print("Invalid action! \n");
+            Service.getInstance().Start(consoleIn,consoleOut);
+        }
+        /*switch (currentUserOptions[option-1]){
             case OP_TRPRODUCE:
                 TRProducer.getInstance().ExecuteOnFormatIO(consoleIn,consoleOut);
                 Service.getInstance().Start(consoleIn,consoleOut);
@@ -75,7 +83,7 @@ public class Service {
             default:
                 consoleOut.print("Invalid action!");
                 break;
-        }
+        }*/
     }
 
     /*private class option {

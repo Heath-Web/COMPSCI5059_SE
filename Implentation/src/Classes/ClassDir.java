@@ -1,5 +1,6 @@
 package Classes;
 
+import Builder.TRBuilder;
 import FormatIO.EofX;
 import FormatIO.FormatInput;
 import FormatIO.FormatOutput;
@@ -15,9 +16,9 @@ public class ClassDir extends Staff{
 
 
     // Produce a teaching request
-    public TeachingRequest produce_one_request(Date time, Float cost, String place, Integer ptt_num,String training){
-        TeachingRequest teachingRequest = new TeachingRequest("tr" + String.valueOf(new Date().getTime()), time, cost, place,ptt_num, this ,training);
-        return teachingRequest;
+    public TeachingRequest produce_one_request(TRBuilder builder){
+        builder.setClassDir(this);
+        return builder.getResult();
     }
 
     @Override

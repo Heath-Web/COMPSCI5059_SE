@@ -3,7 +3,7 @@ package Functions;
 import FormatIO.*;
 import MainProgram.Main;
 
-public class Authentication {
+public class Authentication{
     private static Authentication authentication = new Authentication();
 
     private Authentication(){}
@@ -26,4 +26,5 @@ public class Authentication {
             }else break;
         }
     }
+
 }

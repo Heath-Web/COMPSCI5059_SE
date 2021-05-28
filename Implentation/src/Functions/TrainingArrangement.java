@@ -9,12 +9,18 @@ import MainProgram.Main;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrainingArrangement {
+public class TrainingArrangement implements ClientFunction {
+    private String simpleDiscription = "Arrange a training";
     private static TrainingArrangement trainingArrangement = new TrainingArrangement();
 
     private TrainingArrangement(){}
 
     public static TrainingArrangement getInstance() { return trainingArrangement; }
+
+    @Override
+    public String getSimpleDiscription() {
+        return this.simpleDiscription;
+    }
 
     public void ExecuteOnFormatIO(FormatInput consoleIn, FormatOutput consoleOut) throws EofX {
         consoleOut.print("Please enter the training information (e.g. teaching skill training): ");

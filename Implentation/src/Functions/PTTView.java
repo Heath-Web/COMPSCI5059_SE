@@ -6,7 +6,8 @@ import FormatIO.FormatInput;
 import FormatIO.FormatOutput;
 import MainProgram.Main;
 
-public class PTTView {
+public class PTTView implements ClientFunction{
+    private String simpleDiscription = "View All PTTs";
     private static PTTView pttView = new PTTView();
 
     private PTTView(){}
@@ -19,5 +20,15 @@ public class PTTView {
                 staff.FormatIOPrint(consoleOut);
             }
         }
+    }
+
+    @Override
+    public String getSimpleDiscription() {
+        return this.simpleDiscription;
+    }
+
+    @Override
+    public void ExecuteOnFormatIO(FormatInput consoleIn, FormatOutput consoleOut) throws EofX {
+        this.ShowAll(consoleIn,consoleOut);
     }
 }
