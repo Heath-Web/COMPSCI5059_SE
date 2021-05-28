@@ -1,5 +1,6 @@
 package Functions;
 
+import FormatIO.Console;
 import FormatIO.EofX;
 import FormatIO.FormatInput;
 import FormatIO.FormatOutput;

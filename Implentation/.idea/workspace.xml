@@ -3,24 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bac3ed4-d903-4ed8-a257-57f5e65267f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Builder/TRBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Builder/TRBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Classes/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Classes/Administrator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Classes/ClassDir.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Classes/ClassDir.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Classes/PTT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Classes/PTT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Classes/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Classes/Staff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Classes/TeachingRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Classes/TeachingRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/Authentication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/Authentication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/ClientFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/ClientFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/ExistSys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/FileIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/FileIO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/Logout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/Logout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/PTTAllocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/PTTAllocation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/PTTView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/PTTView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/TRProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/TRProducer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/TRView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/TRView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/Functions/TrainingArrangement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/Functions/TrainingArrangement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Implentation/MainProgram/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Implentation/MainProgram/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functions/ExitSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/ExitSys.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +115,7 @@
       <workItem from="1622044035333" duration="749000" />
       <workItem from="1622110021584" duration="4594000" />
       <workItem from="1622141352744" duration="11345000" />
-      <workItem from="1622179468633" duration="26172000" />
+      <workItem from="1622179468633" duration="27441000" />
     </task>
     <task id="LOCAL-00001" summary="complete all function (first version)">
       <created>1622037821282</created>
