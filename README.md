@@ -23,4 +23,4 @@ Open *Implementation* folder as  a project in IDEA and run
 Alternatively,
 
 1. `cd ./Implementation/out/production/Implementation`
-2. To run the main program`java Mianprogram.Main`
+2. To run the main program`java Mainprogram.Main`
