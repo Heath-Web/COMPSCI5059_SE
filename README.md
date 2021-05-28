@@ -10,7 +10,7 @@
 
 - SequenceDiagrams: Sequence diagrams for each user stories
 
-- Implementation: All the code from your program
+- Implentation: All the code from your program
 
 - screenShots: screenshots showing how the program running
 
@@ -22,5 +22,5 @@ Open *Implementation* folder as  a project in IDEA and run
 
 Alternatively,
 
-1. `cd ./Implementation/out/production/Implementation`
-2. To run the main program`java Mainprogram.Main`
+1. `cd ./Implentation/out/production/Implentation`
+2. To run the main program`java MainProgram.Main`
